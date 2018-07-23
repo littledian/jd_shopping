@@ -112,6 +112,8 @@ class _SlideShowState extends State<SlideShow> {
 
   @override
   void initState() {
+    super.initState();
+
     _currentIndex = widget.currentIndex;
     _controller = PageController(
       initialPage: widget.currentIndex
@@ -119,9 +121,7 @@ class _SlideShowState extends State<SlideShow> {
     _generateSlideDots();
 
     _timer = Timer(Duration(seconds: 2), _timerHandler);
-
-    super.initState();
-  }
+    }
 
   @override
   void dispose() {
