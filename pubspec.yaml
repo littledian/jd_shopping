@@ -27,12 +27,20 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+      # Icons
       - assets/icons/index_active.png
       - assets/icons/classify.png
       - assets/icons/finder.png
       - assets/icons/activity.png
       - assets/icons/shopping_cart.png
       - assets/icons/user.png
+
+      #Banners
+      - assets/images/banner_1.jpg
+      - assets/images/banner_2.jpg
+      - assets/images/banner_3.jpg
+      - assets/images/banner_4.jpg
+      - assets/images/banner_5.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
