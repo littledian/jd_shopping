@@ -62,7 +62,7 @@ class _SlideShowState extends State<SlideShow> {
   void _generateSlideDots() {
     _slideDots = [];
     for (int i = 0; i < widget.items.length; i++) {
-      if (i == _currentIndex) {
+      if (i == (_currentIndex % widget.items.length)) {
         _slideDots.add(GestureDetector(
           child: Container(
             width: _radius,
@@ -100,7 +100,7 @@ class _SlideShowState extends State<SlideShow> {
     _timer = Timer(Duration(seconds: 2), _timerHandler);
 
     setState(() {
-      _currentIndex = _currentIndex == widget.items.length ? 0 : _currentIndex + 1;
+      _currentIndex++;
       _generateSlideDots();
       _controller.animateToPage(
         _currentIndex,

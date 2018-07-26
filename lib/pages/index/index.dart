@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 import 'top_banner.dart';
+import 'activity_part.dart';
+import 'quick_nav_box.dart';
 import 'bottom_navigate_bar.dart';
 
 class IndexPage extends StatefulWidget {
@@ -28,9 +30,14 @@ class _IndexPageState extends State<IndexPage> {
         ),
         child: Column(
           children: <Widget>[
-            TopBanner(),
             Expanded(
-              child: Text('123'),
+              child: ListView(
+                children: <Widget>[
+                  TopBanner(),
+                  ActivityPart(),
+                  QuickNavBox(),
+                ],
+              ),
             ),
             MyBottomNavigateBar()
           ],
